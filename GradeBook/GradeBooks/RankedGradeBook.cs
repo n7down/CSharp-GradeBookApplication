@@ -22,7 +22,7 @@ namespace GradeBook.GradeBooks
 			var numberOfStudentsToDropLetterGrade = totalNumberOfStudents * .2;
 		
 			// list students by average grade in asending order
-			List<double> averageGradeList = Students.OrderBy(s => s.AverageGrade).Select(s => s.AverageGrade).ToList();	
+			List<double> averageGradeList = Students.OrderByDescending(s => s.AverageGrade).Select(s => s.AverageGrade).ToList();	
 			var numberOfStudents = 0;
 			var letterGrade = 'A';
 			var averageGradeLetterGradeDictionary = new Dictionary<double, char>();
